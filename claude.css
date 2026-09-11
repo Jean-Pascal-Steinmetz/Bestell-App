@@ -1,0 +1,117 @@
+:root {
+  --orange: #d97a3f;
+  --cream: #fbe9db;
+  --border-blue: #3b82c4;
+  --dark: #2b2b2b;
+}
+
+.category {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Kopfzeile mit Icon + Titel */
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--orange);
+  padding: 20px 24px;
+  border-radius: 4px 4px 0 0;
+}
+
+.category-header .icon {
+  width: 64px;
+  height: 64px;
+  background: var(--cream);
+  border: 3px solid #e0713a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.category-header h2 {
+  color: white;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Container für die Gerichte-Liste */
+.item-list {
+  border: 2px solid var(--border-blue);
+  background: var(--cream);
+}
+
+.item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px dashed var(--border-blue);
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item img {
+  width: 140px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.item-title-row h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.item-price {
+  font-weight: bold;
+  font-size: 1.15rem;
+  white-space: nowrap;
+}
+
+.item-desc {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 6px 0 auto 0;
+}
+
+.add-btn {
+  align-self: flex-end;
+  margin-top: 10px;
+  border: none;
+  background: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: background 0.15s;
+}
+
+.add-btn:hover {
+  background: #f2f2f2;
+}
+
+.add-btn.added {
+  background: var(--orange);
+  color: white;
+}
