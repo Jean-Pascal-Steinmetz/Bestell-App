@@ -6,6 +6,7 @@
     <title>Bestell App</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <script src="array.js" defer></script>
   </head>
   <body>
     <header>
@@ -17,14 +18,17 @@
       </nav>
       <div class="header-backround">
         <img src="./assets/img/header-backround.png" alt="Tisch voller Essen" />
+        <div class="company-logo">
+          <img src="./assets/img/logo.png" alt="Firmen Logo" />
+        </div>
       </div>
-      <div class="company-logo">
-        <img src="./assets/img/logo.png" alt="Firmen Logo" />
-      </div>
+
       <div class="headline">
         <h1>Burger House</h1>
         <p>Best Burger in Town</p>
       </div>
+    </header>
+    <div class="page-layout">
       <div class="category">
         <div class="category-header">
           <div class="icon">
@@ -33,13 +37,18 @@
           <h2>Burger & Sandwiches</h2>
         </div>
 
-        <div class="item-list" id="itemList">
-        
-        </div>
+        <div class="item-list" id="itemList"></div>
       </div>
-    </header>
+
+      <div id="basketContent"></div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <img src="./assets/icons/copyright.svg" alt="Copyright Logo" />
+        <img src="./assets/icons/2025 BurgerHouse.svg" alt="2025 BurgerHouse" />
+      </div>
+      <img src="./assets/icons/Imprint.svg" alt="Imprint" />
+      <img src="./assets/icons/cookies.svg" alt="Cookies" />
+    </footer>
   </body>
 </html>
-
-
-
