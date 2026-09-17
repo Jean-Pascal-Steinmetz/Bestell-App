@@ -42,7 +42,7 @@ function renderItems() {
 }
 renderItems();
 
-
+// WARENKORB 
 
 function parsePrice(priceStr) {
   return parseFloat(priceStr.replace("€", "").replace(",", "."));

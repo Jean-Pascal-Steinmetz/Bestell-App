@@ -26,7 +26,8 @@
 .navbar-icon{
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 .header-backround{
@@ -64,6 +65,20 @@
     flex-direction: column;
     padding-top: 50px;
     font-size: xx-large;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 6.5rem;
+  display: inline-block;
+}
+
+.logo-orange {
+  color: #E76C1F; 
+}
+
+.logo-dark{
+  color: black;
 }
 
 .category {
@@ -172,21 +187,24 @@
 .single-dish .add-to-basket:hover {
   background: #f2f2f2;
 }
-
-footer{
+footer {
   background-color: #E76C1F;
   width: 100%;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
+  gap: 24px;        
   cursor: pointer;
 }
 
+
+
+
+
 #basketContent {
   position: sticky;
-  top: 20px;  position: sticky;
+  top: 20px;  
   top: 20px;
   flex-shrink: 0;
   width: 320px;
@@ -286,4 +304,115 @@ footer{
   align-items: flex-start;
   gap: 32px;
   padding: 0 24px;
+}
+
+
+
+
+@media (min-width: 1600px) {
+  .page-layout {
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 60px;
+  }
+
+  .category {
+    max-width: 900px;
+  }
+
+  #basketContent {
+    width: 400px;
+  }
+
+  .single-dish {
+    grid-template-columns: 180px 1fr auto;
+    padding: 28px;
+  }
+
+  .single-dish img {
+    width: 180px;
+    height: 140px;
+  }
+
+  .logo {
+    font-size: 7.5rem;
+  }
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .page-layout {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 20px;
+  }
+
+  #basketContent {
+    position: static;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto 0;
+  }
+
+  .basket {
+    max-width: 100%;
+  }
+
+  .category {
+    max-width: 100%;
+  }
+
+  .logo {
+    font-size: 5rem;
+  }
+}
+
+
+
+
+@media (max-width: 480px) {
+  .navbar-icon {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .company-logo {
+    width: 130px;
+    height: 130px;
+    bottom: -40px;
+  }
+
+  .headline {
+    padding-top: 30px;
+  }
+
+  .logo {
+    font-size: 3rem;
+  }
+
+  .headline p {
+    font-size: 1rem;
+  }
+
+  .page-layout {
+    padding: 0 12px;
+    gap: 16px;
+  }
+
+  .category-header {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .category-header .icon {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+
+  .category-header h2 {
+    font-size: 1.3rem;
+  }
 }
