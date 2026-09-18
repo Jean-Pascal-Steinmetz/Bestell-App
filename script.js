@@ -142,12 +142,28 @@ function renderBasket() {
         <div class="summary-row"><span>Delivery fee</span><span>${formatPrice(DELIVERY_FEE)}</span></div>
         <div class="summary-row total-row"><span>Total</span><span>${formatPrice(total)}</span></div>
       </div>
-      <button class="buy-now-btn" onclick="checkout()">Buy now (${formatPrice(total)})</button>
+      <button class="buy-now-btn" id="buyNowBtn" onclick="checkout()">Buy now (${formatPrice(total)})</button>
     </div>`;
 }
 
-
-
 renderBasket();
 
+const overlay = document.getElementById("overlay");
+const orderPopup = document.getElementById("orderPopup");
+const popupClose = document.getElementById("popupClose");
+const basketContent = document.getElementById("basketContent"); 
 
+basketContent.addEventListener("click", (e) => {
+  if (e.target.closest("#buyNowBtn")) {
+    overlay.classList.add("show");
+    orderPopup.classList.add("show");
+  }
+});
+
+function closePopup() {
+  overlay.classList.remove("show");
+  orderPopup.classList.remove("show");
+}
+
+popupClose.addEventListener("click", closePopup);
+overlay.addEventListener("click", closePopup);
