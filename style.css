@@ -32,12 +32,15 @@
 
 .header-backround{
     position: relative;
+    height: 350px;
+    
 }
 
 .header-backround>img{
     display: flex;
     object-fit: cover;
     width: 100%;
+    height:100%;
 }
 
 .company-logo {
